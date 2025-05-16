@@ -1,0 +1,40 @@
+Update the app.controller.ts and the app.service.ts 
+
+
+So that the nestjs application returns an array of data for a pie chart
+
+The data should be in the following format:
+
+[
+  {
+    "name": "Category A",
+    "value": 40
+  },
+  {
+    "name": "Category B",
+    "value": 30
+  },
+  {
+    "name": "Category C",
+    "value": 20
+  },
+  {
+    "name": "Category D",
+    "value": 10
+  }
+]
+
+the endpoint should be /api/pie-chart-data
+
+also update the app.component.ts and app.component.html and app.component.scss 
+
+to have a d3.js pie chart that retrieves the data from http://localhost:3000/api/pie-chart-data
+
+and upon the arrival of the data the pie chart should be rendered
+
+The d3.js pie chart should be drawn within a div within the app.component.html file
+the div id should be pie-chart
+
+and the pie chart should be responsive to the size of the div
+meaning that the width and height of the pie chart should be equal to the width and height of the div
+and the sizing of the svg elements inside of the svg element should resize accordingly

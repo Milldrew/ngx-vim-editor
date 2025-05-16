@@ -1,0 +1,8 @@
+*
+!nest-workspace
+!angular-workspace
+!run_tests.sh
+!playwright-tests
+./playwright-tests/node_modules
+!package-lock.json
+!package.json

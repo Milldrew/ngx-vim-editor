@@ -1,0 +1,19 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "core:test:headless": "PLAYWRIGHT_HTML_OPEN=always PLAYWRIGHT_HTML_HOST=0.0.0.0 playwright test ./tests/core.spec.ts",
+    "core:test:headed": "PLAYWRIGHT_HTML_OPEN=always PLAYWRIGHT_HTML_HOST=0.0.0.0 playwright test --headed ./tests/core.spec.ts",
+    "dev": "nodemon --watch ./tests/core.spec.ts --exec 'playwright test --headed ./tests/core.spec.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "nodemon": "^3.1.10"
+  }
+}
