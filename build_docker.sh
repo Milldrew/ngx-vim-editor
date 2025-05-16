@@ -1,6 +1,6 @@
 #!/bin/sh
-DOCKER_TAG=${PWD##*/}
-DOCKER_DEFAULT_PLATFORM=linux/amd64
+DOCKER_TAG=${1:-${PWD##*/}}
+DOCKER_DEFAULT_PLATFORM=${2:-linux/amd64}
 
 docker rm -f $(docker ps -a -q --filter "ancestor=$DOCKER_TAG")
 docker image rm --force $DOCKER_TAG;
@@ -30,4 +30,5 @@ else
     echo "Process(es) killed"
 fi
 
-docker build ${DOCKER_FLAGS:-} -t $DOCKER_TAG .
+
+docker build --platform $DOCKER_DEFAULT_PLATFORM -t $DOCKER_TAG .

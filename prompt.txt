@@ -1,1 +1,3 @@
 Please update the angular vim-text-area.component so that it creates a text area that follows the vim specificaitons. Use the code mirror package.
+
+and correctly handles vim keystrokes
